@@ -1,0 +1,19 @@
+# settings msmtp
+
+# Gmail
+defaults
+auth           on
+tls            on
+tls_certcheck  off
+logfile        /var/log/bareos/msmtp.log
+account        gmail
+host           smtp.gmail.com
+port           587
+from           "bareos on HOSTNAME"
+user           XXXXX@gmail.com
+password       YYYYYYYYYYYYYYY
+
+
+# Set a default account
+account default : gmail
+
