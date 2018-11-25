@@ -1,5 +1,7 @@
 FROM debian:stretch
 
+MAINTAINER Sergey Ershov "ershovu@gmail.com"
+
 ENV DEBIAN_FRONTEND noninteractive
 
 ENTRYPOINT ["/entrypoint.sh"]
@@ -24,6 +26,7 @@ RUN export DEBIAN_FRONTEND='noninteractive' \
   && apt-get update \
   && apt-get install --no-install-recommends -yqq bareos bareos-database-sqlite3 bareos-webui msmtp apache2 \
   && mv /etc/bareos /etc/bareos.orig \
+  && mv /etc/bareos-webui /etc/bareos-webui.orig \
   && mv /var/lib/bareos /var/lib/bareos.orig \
 # replace sendmail
   && rm /usr/sbin/sendmail \

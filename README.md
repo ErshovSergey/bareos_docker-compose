@@ -17,7 +17,7 @@ cp mysql.env-default mysql.env
 
 Команда для сборки контейнеров
 ```
-docker-compose up --build -d
+docker-compose up --build -d --remove-orphans --force-recreate
 ```
 Команда для удаления контейнеров
 ```

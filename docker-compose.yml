@@ -3,7 +3,8 @@ services:
   bareos-data:
     image: busybox
     volumes:
-       - "${DATA_PATH}/bareos/etc:/etc/bareos/"
+       - "${DATA_PATH}/bareos/etc/bareos:/etc/bareos/"
+       - "${DATA_PATH}/bareos/etc/bareos-webui/etc:/etc/bareos-webui/"
        - "${DATA_PATH}/log:/var/log/bareos/"
        - "${DATA_PATH}/sqlite:/var/lib/bareos/"
     container_name: "${COMPOSE_PROJECT_NAME}_bareos-data"

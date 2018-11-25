@@ -7,6 +7,12 @@ if [[  -z "`ls /etc/bareos`" ]]; then
   mkdir -p "/var/lib/bareos/bsr"
 fi
 
+# если папка с конфигами /etc/bareos-webui пуста
+if [[  -z "`ls /etc/bareos-webui`" ]]; then
+  cp -pR /etc/bareos-webui.orig/* /etc/bareos-webui
+  mkdir -p "/var/lib/bareos/bsr"
+fi
+
 ## пароль bareos-webui
 [ ! -f /etc/bareos/bareos-dir.d/console/admin.conf ] && cp /etc/bareos/bareos-dir.d/console/admin.conf.example /etc/bareos/bareos-dir.d/console/admin.conf
 
