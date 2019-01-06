@@ -21,7 +21,7 @@ docker-compose up --build -d --remove-orphans --force-recreate
 ```
 Команда для удаления контейнеров
 ```
-docker-compose down
+docker-compose down --remove-orphans
 ``` 
 
 
