@@ -22,7 +22,7 @@ docker-compose up --build -d --remove-orphans --force-recreate
 ```
 docker-compose down --remove-orphans
 ``` 
-
+Пароль для доступа к веб интерфейсу задается в файле *%{DATA_PATH}bareos/bareos-dir.d/console/admin.conf*  
 
 > Copyright (c) 2018 &lt;[ErshovSergey](http://github.com/ErshovSergey/)&gt;
 
