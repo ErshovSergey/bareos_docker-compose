@@ -10,6 +10,8 @@ fi
 # если папка с конфигами /etc/bareos-webui пуста
 if [[  -z "`ls /etc/bareos-webui`" ]]; then
   cp -pR /etc/bareos-webui.orig/* /etc/bareos-webui
+  /usr/lib/bareos/scripts/create_bareos_database
+  /usr/lib/bareos/scripts/make_bareos_tables
   mkdir -p "/var/lib/bareos/bsr"
 fi
 
