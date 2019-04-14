@@ -11,7 +11,6 @@ git clone https://github.com/ErshovSergey/bareos_docker-compose.git
 Скопируйте настройки по умолчанию
 ```
 cp .env-default .env
-cp mysql.env-default mysql.env
 ```
 Внесите необходимые настрокий
 
