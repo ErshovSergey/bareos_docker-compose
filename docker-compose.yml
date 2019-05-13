@@ -13,6 +13,8 @@ services:
       -  "${HTTP_IP_PORT}:80"
     restart: always
     volumes:
+       - "/etc/timezone:/etc/timezone:ro"
+       - "/etc/localtime:/etc/localtime:ro"
        - "${DATA_PATH}/bareos/etc/bareos:/etc/bareos/"
        - "${DATA_PATH}/bareos/etc/bareos-webui/etc:/etc/bareos-webui/"
        - "${DATA_PATH}/log:/var/log/bareos/"
